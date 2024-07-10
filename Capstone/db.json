@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Chocolate Cake",
+      "category": "cake",
+      "image": "https://via.placeholder.com/150?text=Chocolate+Cake",
+      "description": "Delicious chocolate cake."
+    },
+    {
+      "id": 2,
+      "name": "Vanilla Cookies",
+      "category": "cookie",
+      "image": "https://via.placeholder.com/150?text=Vanilla+Cookies",
+      "description": "Crispy vanilla cookies."
+    },
+    {
+      "id": 3,
+      "name": "Fudge Brownie",
+      "category": "brownie",
+      "image": "https://via.placeholder.com/150?text=Fudge+Brownie",
+      "description": "Chewy fudge brownie."
+    }
+  ]
+}

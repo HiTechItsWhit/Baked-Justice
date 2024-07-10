@@ -1,0 +1,55 @@
+.contact-us-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: "Arial, sans-serif";
+  color: #333;
+}
+
+.contact-us-section h2 {
+  color: #d9534f;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-us-section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.contact-details {
+  margin: 20px 0;
+}
+
+.contact-details p {
+  margin: 5px 0;
+}
+
+.contact-details a {
+  color: #d9534f;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.social-media a {
+  color: #d9534f;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.social-media a:hover {
+  text-decoration: underline;
+}

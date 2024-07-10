@@ -1,0 +1,27 @@
+<div>
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <input matInput [(ngModel)]="searchTerm" (input)="onSearchTermChange()" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Filter by Category</mat-label>
+    <mat-select
+      [(ngModel)]="filterCategory"
+      (selectionChange)="onFilterCategoryChange()"
+    >
+      <mat-option value="">All</mat-option>
+      <mat-option value="cake">Cakes</mat-option>
+      <mat-option value="cookie">Cookies</mat-option>
+      <mat-option value="brownie">Brownies</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="items-grid">
+    <div *ngFor="let item of filteredItems" (click)="selectItem(item)">
+      <img [src]="item.image" [alt]="item.name" />
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.description }}</p>
+    </div>
+  </div>
+</div>

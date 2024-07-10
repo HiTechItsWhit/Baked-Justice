@@ -1,0 +1,11 @@
+<mat-form-field>
+  <mat-label>Search Desserts</mat-label>
+  <input
+    (input)="searchDesserts()"
+    matInput
+    type="text"
+    placeholder="Justice's Baked Goods"
+    name="fruitName"
+    [(ngModel)]="fruitName"
+  />
+</mat-form-field>

@@ -1,0 +1,66 @@
+<div class="search-container">
+  <app-search
+    id="search-fruit-panel"
+    (searchTextChanged)="onSearchTextChanged($event)"
+  ></app-search>
+</div>
+<div>
+  <!-- <mat-chip-listbox #chips class="chip" (change)="search(chips.value)"> -->
+  <mat-chip-option
+    color="warn"
+    selected
+    value="all"
+    (click)="categoryFilter('all')"
+    >All</mat-chip-option
+  >
+  <mat-chip-option color="primary" value="cake" (click)="categoryFilter('cake')"
+    >Cakes</mat-chip-option
+  >
+  <mat-chip-option
+    color="warn"
+    value="brownies"
+    (click)="categoryFilter('brownies')"
+    >Brownies</mat-chip-option
+  >
+  <mat-chip-option
+    color="accent"
+    value="cookies"
+    (click)="categoryFilter('cookies')"
+    >Cookies</mat-chip-option
+  >
+  <!-- </mat-chip-listbox> -->
+</div>
+<div class="product-container">
+  <mat-card *ngFor="let product of products" class="product-card">
+    <!-- <mat-card-header>
+      <mat-card-title>{{ product.productName }}</mat-card-title>
+    </mat-card-header> -->
+    <a [routerLink]="['/product', product.id]">
+      <img
+        mat-card-image
+        [src]="product.image"
+        alt="{{ product.productName }}"
+      />
+    </a>
+
+    <!-- <mat-card-content>
+      <p>Price: {{ product.price }}, Categories: {{ product.categories }}</p>
+      <p>{{ product.ingredients }}</p>
+    </mat-card-content> -->
+  </mat-card>
+</div>
+<!-- <app-order-form></app-order-form>
+<app-dessert-list></app-dessert-list> -->
+<!-- <div class="container">
+  <app-search
+    id="search-fruit-panel"
+    (searchTextChanged)="onSearchTextChanged($event)"
+  ></app-search>
+  <mat-expansion-panel id="add-fruit-panel">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Add Fruit</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    
+  </mat-expansion-panel> -->

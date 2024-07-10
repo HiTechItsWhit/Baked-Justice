@@ -1,0 +1,16 @@
+.items-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.items-grid > div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
