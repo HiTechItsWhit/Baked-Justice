@@ -7,8 +7,12 @@ import { DessertsService } from '../services/desserts.service';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { products } from '../models/desserts';
+import { PRODUCTS } from '../models/desserts';
+import { Products } from '../models/dessert';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { MatIcon } from '@angular/material/icon';
+import { MatRippleModule } from '@angular/material/core';
+
 @Component({
   selector: 'app-landing-page',
   standalone: true,
@@ -21,13 +25,15 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
     CommonModule,
     MatExpansionModule,
     RouterLink,
+    MatIcon,
+    MatRippleModule,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
 })
 export class LandingPageComponent implements OnInit {
-  products: products[] = [];
-  orignalProducts: products[] = [];
+  products: Products[] = [];
+  orignalProducts: Products[] = [];
   constructor(
     private dessertService: DessertsService,
     private route: ActivatedRoute
@@ -37,7 +43,8 @@ export class LandingPageComponent implements OnInit {
   }
   loadProducts() {
     this.dessertService.getProducts().subscribe((data) => {
-      this.products = data.products;
+      debugger;
+      this.products = data;
       this.products.forEach((element) => {
         element.image = 'assets/images/' + element.image + '.jpg';
       });

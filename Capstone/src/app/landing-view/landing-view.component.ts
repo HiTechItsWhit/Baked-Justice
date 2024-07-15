@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../item.service';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatOption } from '@angular/material/core';
+import { MatSelect } from '@angular/material/select';
 
 interface Item {
   id: number;
@@ -12,7 +15,7 @@ interface Item {
 @Component({
   selector: 'app-landing-view',
   standalone: true,
-  imports: [],
+  imports: [MatFormField, MatLabel, MatOption, MatSelect],
   templateUrl: './landing-view.component.html',
   styleUrl: './landing-view.component.css',
 })

@@ -24,7 +24,7 @@ import { MatNativeDateModule } from '@angular/material/core';
   styleUrl: './order-form.component.css',
 })
 export class OrderFormComponent implements OnInit {
-  product: any;
+  product: any = new Object();
   form: any = {
     date: '',
     quantity: 1,
@@ -38,11 +38,25 @@ export class OrderFormComponent implements OnInit {
     private dessertService: DessertsService
   ) {}
   ngOnInit(): void {
-    debugger;
     const productId = this.route.snapshot.paramMap.get('id');
     this.dessertService.getProducts().subscribe((data) => {
-      this.product = data.products.find((p: any) => p.id + '' === productId);
+      this.product = data.find((p: any) => p.id + '' === productId);
       this.product.image = 'assets/images/' + this.product.image + '.jpg';
     });
+  }
+  onSubmit() {
+    console.log('OrderSubmitted:this.product');
+    alert('Order Submitted');
+    this.resetForm();
+  }
+  resetForm() {
+    this.product = {
+      date: '',
+      quantity: '',
+      name: '',
+      email: '',
+      phone: '',
+      address: '',
+    };
   }
 }
