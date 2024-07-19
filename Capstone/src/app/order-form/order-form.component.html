@@ -64,7 +64,8 @@
         <mat-label>Address</mat-label>
         <input matInput type="text" [(ngModel)]="form.address" name="phone" />
       </mat-form-field>
-      <button mat-flat-button>Place Order</button>
+
+      <button type="submit" mat-flat-button  [disabled]="!form.valid">Submit Order</button>
     </form>
   </div>
 </div>
